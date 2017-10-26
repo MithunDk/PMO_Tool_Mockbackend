@@ -1,0 +1,192 @@
+ <div class="row">
+        <div class="col s12 m12">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <p>User Management</p>
+            </div>
+        </div>
+        </div>
+ </div>
+ <div class="row">
+  <div class="col s3">
+            <select materialize="material_select">
+            <option>All</option>
+            <option>Digital</option>
+            <option>Legacy</option>
+            <option>TP&E</option>
+            </select>
+  </div>
+  <div class="col s3">
+            <select materialize="material_select">
+            <option>Projects-Team</option>
+            <option>TDM</option>
+            <option>Voice</option>
+            <option>CM</option>
+            </select>
+  </div>
+  <div class="input-field col s5">
+  <input id="search" type="search" >
+  <label  for="search"><i class="material-icons">search</i>Search</label>
+  <i class="material-icons">close</i> 
+  </div>
+  </div>
+<div class="row">
+<div class="col s12 m12">
+<div class="card blue-grey darken-1">
+<div class="card-action">
+  <div class="card-tabs">
+  <a class="tab active waves-effect waves-green" (click)="getUsers()">New</a>
+  <a class="tab waves-effect waves-green" (click)="getActiveUsers()">Active</a>
+  <a class="tab waves-effect waves-green" (click)="getInactiveUsers()">Inactive</a>
+  <a class="btn waves-effect waves-light right" [routerLink]="['/user/create']">Add New User</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="card-panel">
+    <table class="bordered highlight" >
+        <thead>
+            <th>Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Enterprise ID</th>
+            <th>Project-team</th>
+            <th>DU</th>
+            <th>Actions</th>
+        </thead>
+         <tbody *ngIf="show">
+            <tr *ngFor="let user of users" >
+                <td>{{user.userID}}</td>
+                <td>{{user.firstName}}</td>
+                <td>{{user.lastName}}</td>
+                <td>{{user.enterpriseId}}</td>
+                <td>{{user.projectTeam}}</td>
+                <td>{{user.du}}</td>
+                 <td> 
+                 <a class="btn-floating red"  [routerLink]="['/user/update', user.userID]"> <i class="medium material-icons" >mode_edit</i></a>
+                 <a class="btn-floating waves-effect waves-light red btn modal-trigger" (click)="openModal()"><i class="material-icons">add_to_photos</i></a>
+                <a class="btn-floating waves-effect waves-light green btn-xs"  (click)="postactiveUsers(user,user.userID)"><i class="material-icons">check</i></a>
+                <!--<a class="btn-floating waves-effect waves-light red btn-xs"  (click)="deleteUser(user.userID)"><i class="material-icons">delete</i></a>-->
+                </td> 
+            </tr>
+          </tbody>
+          <tbody  *ngIf="shows">
+             <tr *ngFor="let activeuser of activeUsers" >
+                <td>{{activeuser.userID}}</td>
+                <td>{{activeuser.firstName}}</td>
+                 <td>{{activeuser.lastName}}</td>
+                <td>{{activeuser.enterpriseId}}</td>
+                <td>{{activeuser.projectTeam}}</td>
+                <td>{{activeuser.du}}</td>
+                <td><a class="btn-floating green" [routerLink]="['/user/update', activeuser.userID]"> <i class="large material-icons">mode_edit</i> </a>
+                  <a class="btn-floating waves-effect waves-light red btn modal-trigger" (click)="openModal()"><i class="material-icons">add_to_photos</i></a>
+                  <a class="btn-floating waves-effect waves-light red btn-xs" (click)="postinactiveUsers(activeuser,activeuser.userID)"><i class="material-icons">do_not_disturb_off</i></a>
+                 <!--<a class="btn-floating waves-effect waves-light red btn-xs"  (click)="deleteActiveUser(activeuser.userID)"><i class="material-icons">delete</i></a></td>-->
+               </tr>
+          </tbody>
+            <tbody  *ngIf="showss">
+             <tr *ngFor="let inactiveuser of inactiveUsers" >
+                <td>{{inactiveuser.userID}}</td>
+                <td>{{inactiveuser.firstName}}</td>
+                <td>{{inactiveuser.lastName}}</td>
+                <td>{{inactiveuser.enterpriseId}}</td>
+                <td>{{inactiveuser.projectTeam}}</td>
+                <td>{{inactiveuser.du}}</td>
+                <td>
+                  <a class="btn-floating red" [routerLink]="['/user/update', inactiveuser.userID]"> <i class="large material-icons">mode_edit</i> </a>
+                  <!-- <a class="btn-floating waves-effect waves-light red btn-xs"  (click)="deleteInctiveUser(inactiveuser.userID)"><i class="material-icons">delete</i></a> -->
+                  <a class="btn-floating waves-effect waves-light green btn-xs"  (click)="postReactiveUsers(inactiveuser,inactiveuser.userID)"><i class="material-icons">check</i></a>
+                </td>
+                </tr>
+          </tbody>
+           </table>
+           
+
+</div>
+</div> 
+<!-- Modal Structure -->
+<div id="modal1" class="modal modal-fixed-footer" materialize="modal" [materializeParams]="[{dismissible: false}]" [materializeActions]="modalActions">
+  
+<div class="modal-content">
+    
+    <div class="row">
+    <div class="card cyan darken-1 cards">
+    <div class="card-content white-text contentss">
+    <p>Add Users to Project/Team</p>
+    </div></div>
+    </div>
+    
+    <p>Selected Teams</p>
+    <div>
+    <div *ngFor="let yes of userr ; let i= index">
+        <p ><a> {{yes.du}}-{{yes.projectTeam}}<i class="tiny material-icons waves-effect waves-light" (click)="toggleState1(yes,i)">clear</i></a></p> 
+   </div>
+</div>
+    
+    <div class="row">
+           <div class="col s3">
+            <select materialize="material_select">
+            <option>All</option>
+            <option>Digital</option>
+            <option>Legacy</option>
+            <option>TP&E</option>
+            
+            </select>
+        </div>
+        <div class="col s3">
+            <select materialize="material_select">
+            <option>All</option>
+            <option>Reimagine</option>
+            <option>ACMS</option>
+            <option>Devops</option>
+            <option>Voice</option>
+            </select>
+        </div>
+         <div class="col s3">
+            <select materialize="material_select">
+            <option>All</option>
+            <option>Dev</option>
+            <option>TDM</option>
+            <option>OCP</option>
+            </select>
+        </div>
+
+       <div class="input-field col s3">
+       <input id="search" type="search" >
+       <label  for="search"><i class="material-icons">search</i>Search</label>
+       <i class="material-icons">close</i> 
+      </div>
+  </div>
+   <div class="row">
+     
+    <table class="bordered highlight">
+      <thead>
+            <th><input type="checkbox"  id="filled-in-b"  />
+              <label for="filled-in-b"></label> </th>
+            <th>Delivery Unit</th>
+            <th>Project</th>
+            <th>Team</th>
+      </thead>
+      <tbody >
+          <tr *ngFor = "let use of users; let i= index">
+          <td >
+              <input type="checkbox" id="filled-in-box{{use.userID}}" [(ngModel)]="use.isChecked" (click)="toggleState(use,i)" name="isChecked"  />
+            <label for="filled-in-box{{use.userID}}"></label></td>
+               <td>{{use.du}}-{{i}}</td>
+              <td>{{use.projectTeam}}</td>
+              <td>{{use.lastName}}</td>
+            </tr>
+          </tbody>
+      </table>
+    
+  </div>
+<div class="modal-footer">
+    <a class="modal-action modal-close waves-effect waves-green btn-flat">Ok</a>
+    <a class="waves-effect waves-green btn-flat" (click)="closeModal()">Cancel</a>
+  </div>
+</div>
+</div>
+     
+    

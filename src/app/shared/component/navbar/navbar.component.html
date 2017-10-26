@@ -1,0 +1,47 @@
+<header class="mn-header navbar-fixed">
+    <nav class="cyan darken-1">
+        <div class="nav-wrapper row">
+            <div class="header-title col s3">
+                <span class="chapter-title">Demand & Supply Manager</span>
+            </div>
+
+            <div class="right">
+                <!--<i class="material-icons" data-activates="dropdown1" materialize="dropdown">more_vert</i>-->
+                <button class="btn" data-activates="dropdown1" materialize="dropdown" > Profile</button>
+                <ul  class="dropdown-content pos" id="dropdown1">
+                    <li><a class="waves-effect waves-grey" [routerLink]="['/']">Profile</a></li>
+                    <li><a class="waves-effect waves-grey" [routerLink]="['/']">Settings</a></li>
+                    <li> <a class="waves-effect waves-grey"[routerLink]="['/user']">User Management</a></li>
+                    <li><a class="waves-effect waves-grey" [routerLink]="['/login']">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<aside id="slide-out" class="side-nav white fixed">
+    <div class="side-nav-wrapper">
+        <div class="sidebar-profile">
+            <div class="sidebar-profile-image">
+                <img src="assets/images/profile-image.png" class="circle" alt="">
+            </div>
+            <div class="sidebar-profile-info">
+                <a href="javascript:void(0);" class="account-settings-link">
+                    <p>Role : PMO</p>
+                    <span>pmo@accenture.com</span>
+                </a>
+            </div>
+        </div>
+
+        <ul class="sidebar-menu collapsible collapsible-accordion">
+
+            <li class="no-padding" [routerLinkActive]="['active']"><a class="waves-effect waves-grey"   [routerLink]="['/dashboard']"><i class="material-icons">settings_input_svideo</i>Dashboard</a></li>
+            <li class="no-padding" [routerLinkActive]="['active']"><a class="waves-effect waves-grey"   [routerLink]="['/demand']"><i class="material-icons">settings_input_svideo</i>Demand</a></li>
+            <!-- <li class="no-padding"><a class="waves-effect waves-grey" [routerLink]="['/demand']"><i class="material-icons">settings_input_svideo</i>Dashboard</a></li>
+            <li class="no-padding"><a class="waves-effect waves-grey" [routerLink]="['/demand/create']"><i class="material-icons">settings_input_svideo</i>Demand & Supply</a></li>
+            <li class="no-padding"><a class="waves-effect waves-grey" [routerLink]="['/login']"><i class="material-icons">settings_input_svideo</i>Grant Access</a></li> -->
+
+
+        </ul>
+
+    </div>
+</aside>

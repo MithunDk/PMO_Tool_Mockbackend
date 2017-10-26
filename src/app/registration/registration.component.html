@@ -1,0 +1,62 @@
+<div class="signin-page">
+    <div class="mn-content valign-wrapper">
+        <main class="mn-inner container">
+            <div class="valign">
+                <div class="row">
+                    <div class="col s12 m6 l4 offset-l4 offset-m3">
+                        <div class="card white darken-1">
+                            <div class="card-content ">
+                                <span class="card-title">Register</span>
+                                <div class="row">
+                                    <form name="form" (ngSubmit)="f.form.valid && register()" #f="ngForm" novalidate>
+                                        <div class="input-field col s12" [ngClass]="{ 'has-error': f.submitted && !firstName.valid }">
+                                            <input id="text" type="text" class="validate" name="firstName" [(ngModel)]="model.firstName" #firstName="ngModel">
+                                            <label for="text">First Name</label>
+                                            <div *ngIf="f.submitted && !firstName.valid" class="help-block">First Name is required</div>
+                                        </div>
+                                        <div class="input-field col s12" [ngClass]="{ 'has-error': f.submitted && !lastName.valid }">
+                                            <input id="text" type="text" class="validate" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel">
+                                            <label for="text">Last Name</label>
+                                            <div *ngIf="f.submitted && !lastName.valid" class="help-block">Last Name is required</div>
+                                        </div>
+                                        <div class="input-field col s12" [ngClass]="{ 'has-error': f.submitted && !emailId.valid }">
+                                            <input id="text" type="text" class="validate" name="emailId" [(ngModel)]="model.emailId" #emailId="ngModel">
+                                            <label for="text">Email ID</label>
+                                            <div *ngIf="f.submitted && !emailId.valid" class="help-block">Email ID is required</div>
+                                        </div>
+                                        <div class="input-field col s12" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
+                                            <input id="text" type="text" class="validate" name="username" [(ngModel)]="model.username" #username="ngModel">
+                                            <label for="text">Username</label>
+                                            <div *ngIf="f.submitted && !username.valid" class="help-block">Username is required</div>
+                                        </div>
+                                        <div class="input-field col s12" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
+                                            <input id="text" type="text" class="validate" name="password" [(ngModel)]="model.password" #password="ngModel">
+                                            <label for="text">Password</label>
+                                            <div *ngIf="f.submitted && !password.valid" class="help-block">Password is required</div>
+                                        </div>
+                                        <div class="col s12">
+                                            <span class="role">Role</span>
+                                                <input class="with-gap" name="group1" type="radio" id="pmo" />
+                                                <label for="pmo">PMO</label>
+                                                <input class="with-gap" name="group1" type="radio" id="tl" />
+                                                <label for="tl">Team Leader</label>
+                                                <input class="with-gap" name="group1" type="radio" id="manager"  />
+                                                <label for="manager">Manager</label>
+                                            <div *ngIf="f.submitted && !role.valid" class="help-block">Role is required</div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <button class="btn btn-primary">Register</button>
+
+                                            <a class="btn btn-link">Cancel</a>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>

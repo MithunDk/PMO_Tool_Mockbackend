@@ -1,0 +1,24 @@
+<div class="card-panel">
+  <table class="striped">
+    <thead class="success">
+      <th>Personnel No</th>
+      <th>Name</th>
+      <th>Enterprise ID</th>
+      <th>Level</th>
+      <th>Location</th>
+      <th>Sourcing Type</th>
+      <th>Sourcing Stage</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let supply of supplies">
+        <td>{{supply.PersonnelNo}}</td>
+        <td>{{supply.ResourceName}}</td>
+        <td>{{supply.EnterpriseID}}</td>
+        <td>{{supply.Level}}</td>
+        <td>{{supply.Location}}</td>
+        <td>{{supply.SourcingType}}</td>
+        <td>{{supply.SourcingStage}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

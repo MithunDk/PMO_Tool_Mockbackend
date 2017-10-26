@@ -1,0 +1,88 @@
+<!-- Modal Trigger -->
+<!-- <a class="waves-effect waves-light btn modal-trigger" href="#modal1" (click)="openModal()">Modal</a> -->
+
+<!-- Modal Structure -->
+<!-- <div id="modal1" class="modal modal-fixed-footer" materialize="modal" [materializeParams]="[{dismissible: false}]" [materializeActions]="modalActions">
+            <div class="modal-content">
+                <h4>Modal Header</h4>
+                <p>A bunch of text</p>
+            </div>
+            <div class="modal-footer">
+                <a class="waves-effect waves-green btn-flat" (click)="closeModal()">Close</a>
+                <a class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+            </div>
+        </div> -->
+
+<div class="card white darken-1">
+    <div class="card-content ">
+       <div class="card-panel light-blue darken-4"> <span class="white-text text-darken-2">Create Demand</span></div>
+        <div class="row">
+            <form name="form" novalidate>
+                <div class="input-field col s4">
+                    <input type="text" class="form-control input-sm" name="projectName" [(ngModel)]="demand.projectName" #projectName="ngModel"
+                        required />
+                    <label for="text">Project Name</label>
+                </div>
+                <div class="input-field col s4">
+                    <input type="text" class="form-control input-sm" name="rrd" [(ngModel)]="demand.rrd" #rrd="ngModel"
+                        required />
+                    <label for="text">RRD/MYs ID</label>
+                </div>
+                <div class="input-field col s4">
+                    <input type="text" class="form-control input-sm" name="location" [(ngModel)]="demand.location" #location="ngModel" />
+                    <label for="text">Location</label>
+
+                </div>
+                <div class="input-field col s4">
+                <select [(ngModel)]="demand.priority" id="priority" name="priority" materialize="material_select" [materializeSelectOptions]="priority" #priority="ngModel">
+                  <option value="" disabled selected>Demand Priority</option>
+                  <option *ngFor="let priority of prioritys" >{{priority.name}}</option>
+                </select> 
+                <label>Demand Priority</label>
+                </div>
+
+                <div class="input-field col s4">
+                <select [(ngModel)]="demand.primaryskills" id="primarySkill" name="primarySkill" materialize="material_select" [materializeSelectOptions]="pskills" #primaryskills="ngModel">
+                  <option value="" disabled selected>Primary Skills</option>
+                  <option *ngFor="let psikll of pskills" >{{psikll.name}}</option>
+                </select> 
+                <label>Primary Skills</label>
+                </div>
+     
+                 <div class="input-field col s4">
+                    <select [(ngModel)]="demand.additionalskills" id="additionalSkill" name="additionalSkill" materialize="material_select" [materializeSelectOptions]="askills" #additionalskills="ngModel">
+                        <option value="" disabled selected>Additional Skills</option>
+                        <option *ngFor="let asikll of askills" >{{asikll.name}}</option>
+                    </select> 
+                    <label>Additional Skills</label>
+                </div>
+
+                <div class="input-field col s8">
+                    <textarea id="textarea1" name="textarea1" [(ngModel)]="demand.jobdescription" class="materialize-textarea" #jobdescription="ngModel"></textarea>
+                    <label for="textarea1">Job Description</label>
+                </div>
+                
+                 <div class="input-field col s4">
+                   <label>Demand Start Date</label>  
+                   <input id="birthdate" materialize="pickadate" [(ngModel)]="demand.startdate" [materializeParams]="[{format: 'dd/mm/yyyy',selectMonths: true, selectYears: 15}]" name="datepicker" type="text" >
+                </div>
+                 <div class="col s12">
+                    <span class="role">Gender</span>
+                    <span *ngFor="let g of genders">
+                    <input class="with-gap" type="radio" name="gender" [(ngModel)]="demand.gender" [value]="g" id="{{g}}" #gender="ngModel"/>
+                    <label for="{{g}}">{{g}}</label>
+                    </span>
+                </div> 
+            
+                 <div class="col s12">
+               <button class="btn waves-effect waves-light light-blue darken-4" (click)=createDemand()>Create Demand
+                <i class="material-icons right">send</i>
+               </button>  
+             <button class="btn waves-effect waves-light light-blue darken-4" [routerLink]="['/demand']" >Back</button>  
+                 </div>
+ 
+              
+            </form>
+        </div>
+    </div>
+</div>

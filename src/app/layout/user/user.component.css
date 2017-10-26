@@ -1,0 +1,25 @@
+.input-field {
+    position: relative;
+    margin-top: 0rem;
+}
+place{
+    margin-top: 8px;
+}
+pos{
+        position: absolute;
+    margin-top: -4pc;
+    margin-left: 21pc;
+}
+.card .card-content {
+    padding: 10px;
+    border-radius: 0 0 2px 2px;
+}
+.cards{
+    height:3pc;
+    margin-top: -24px;
+    margin-left: -24px;
+    margin-right: -24px;
+}
+.cards .contentss{
+    padding-top: 1px;
+}

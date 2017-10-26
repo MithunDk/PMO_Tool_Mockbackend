@@ -1,0 +1,190 @@
+<!-- <div class="row padd-up">
+         <div class="col s6">
+           <h5> Demand-list </h5>
+         </div>
+      <div class="col s6">   
+            <span class="pull-left">
+            <a class="btn waves-effect waves-light red" [routerLink]="['/demand/create']">Add New Demand</a>
+       </span>
+      </div>    
+     </div> -->
+<div class="row">
+    <div class="card-panel">
+        <div class="row">
+            <div class="col s4">
+                <select materialize="material_select">
+            <option>DU</option>
+            <option>DU2</option>
+            <option>DU3</option>
+            </select>
+            </div>
+            <div class="col s4">
+                <select materialize="material_select">
+            <option>Project</option>
+            <option>Project2</option>
+            <option>Project3</option>
+            <option>Project4</option>
+            </select>
+            </div>
+            <div class="col s4">
+                 <div class="input-field">
+                <input type="text" class="" name="Search" 
+                    required />
+                <label for="text">search</label>
+                 </div>
+            </div>
+
+        </div>
+
+    </div>
+
+     <div class="card-panel">
+       
+        <table class="striped">
+            <thead>
+                <th class="">Priority</th>
+                <th class="">Project Name</th>
+                <th class="">Location</th>
+                <th class="">Primary Skill</th> 
+                <th class="">Demand Start Date</th> 
+                <th ><a class="btn waves-effect waves-light light-blue darken-4" [routerLink]="['/demand/create']">Add New Demand</a></th>
+            </thead>
+            <tbody>
+                <tr class="" *ngFor="let demand of demands">
+                     <td class="">{{demand.priority}}</td>
+                    <td class="">{{demand.projectName}}</td>
+                    <td class="">{{demand.location}}</td>
+                    <td class="">{{demand.primaryskills}}</td>
+                    <td class="">{{demand.startdate}}</td>
+                    <td colspan="3" class=""><span class="padd_5"><a class="waves-effect waves-light btn light-blue darken-4" [routerLink]="['/demand/update', demand.demandID]"><i class="material-icons" >edit</i></a></span>
+                    <span class=""><a class="waves-effect waves-light btn light-blue darken-4" (click)="deleteDemand(demand.demandID)"><i class="material-icons" >delete_forever</i></a></span>
+                    <span class=""><a class="waves-effect waves-light btn light-blue darken-4" [routerLink]="['/demand/supply',demand.demandID]">View Supply</a></span></td>
+                </tr>
+
+            </tbody>
+        </table>
+ 
+         <ul class="pagination">
+    <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+    <li class="active light-blue darken-4"><a href="#!">1</a></li>
+    <li class="waves-effect "><a href="#!">2</a></li>
+    <li class="waves-effect"><a href="#!">3</a></li>
+    <li class="waves-effect"><a href="#!">4</a></li>
+    <li class="waves-effect"><a href="#!">5</a></li>
+    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+  </ul>
+    </div>
+
+
+<!-- <div class="card-panel">
+    <div class="wrapper">
+    <table width="100%" class="scrollTable">
+    <thead class="fixedHeader">
+        <tr>
+            <th class="">Demand ID</th>
+                <th class="">Project Name</th>
+                <th class="">Chargeable</th>
+                <th class="">Location</th>
+                <th class="">Career Level</th>
+                <th class="">Primary Skill</th> 
+                <th ><a class="btn waves-effect waves-light light-blue darken-4" [routerLink]="['/demand/create']">Add New Demand</a></th>
+        </tr>
+    </thead>
+    <tbody class="scrollContent">
+        <tr class="" *ngFor="let demand of demands">
+                    <td class="">{{demand.demandID}}</td>
+                    <td class="">{{demand.projectName}}</td>
+                    <td class=""> <input type="checkbox" [checked]="demand.Chargeable" disabled="disabled" /> </td>
+                    <td class="">{{demand.location}}</td>
+                    <td class="">{{demand.careerLevel}}</td>
+                    <td class="">{{demand.primarySkill}}</td>
+                    <td><a [routerLink]="['/demand/update', demand.demandID]"><i class="material-icons" >edit</i></a></td>
+                    <td><a href="#" (click)="deleteDemand(demand.demandID)"><i class="material-icons" >delete_forever</i></a></td>
+                    <td><a [routerLink]="['/supply',demand.demandID]">View Supply</a></td>
+                </tr>
+    </tbody>
+    </table>
+</div>      
+
+</div>  -->
+
+
+<!-- <table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+    <tr>
+        <th style="text-align: center;" colspan="1" rowspan="2">Account<br>Description</th>
+        <th style="text-align: center;" colspan="6" rowspan="1">Budget Chart</th>
+    </tr>
+    <tr>
+        <th>Header 1</th>
+        <th>header 2</th>
+        <th>Header 3</th>
+        <th>Header 4</th>
+        <td style="border: medium none; width: 100px; vertical-align: top;" colspan="1" rowspan="5">
+            <div class="inner-table">
+                <table style="text-align: left; width: 500px;" border="1" cellpadding="2" cellspacing="2">
+                <tbody>
+                        <tr>
+                        <th>Header 1</th>
+                        <th>Header 2</th>
+                        <th>Header 3</th>
+                        <th>Header 4</th>
+                    </tr>
+                        <tr>
+                        <td>a</td>
+                        <td>a</td>
+                        <td>a</td>
+                        <td>a</td>
+                    </tr>
+                    <tr>
+                        <td>b</td>
+                        <td>b</td>
+                        <td>b</td>
+                        <td>b</td>
+                    </tr>
+                    <tr>
+                        <td>c</td>
+                        <td>c</td>
+                        <td>c</td>
+                        <td>c</td>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+        </td>
+        <td>Header 5</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>a</td>
+        <td>a</td>
+        <td>a</td>
+        <td>a</td>
+        <td>a</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>b</td>
+        <td>b</td>
+        <td>b</td>
+        <td>b</td>
+        <td>b</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>c</td>
+        <td>c</td>
+        <td>c</td>
+        <td>c</td>
+        <td>c</td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+</tbody>
+</table> -->

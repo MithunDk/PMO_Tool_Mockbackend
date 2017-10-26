@@ -1,0 +1,40 @@
+<div class="signin-page">
+    <div class="mn-content valign-wrapper">
+        <main class="mn-inner container">
+            <div class="valign">
+                <div class="row">
+                    <div class="s12" style="text-align:center">
+                        <h4>Demand & Supply Manager</h4>
+                    </div>
+                    <div class="col s12 m6 l4 offset-l4 offset-m3">
+                        <div class="card white darken-1">
+                            <div class="card-content ">
+                                <span class="card-title">Sign In</span>
+                                <div class="row">
+                                    <!-- <form [formGroup]="loginform" (ngSubmit)="doLogin(loginform)" class="col s12"> -->
+
+                                    <div class="input-field col s12">
+                                        <input id="email" type="text" class="validate">
+                                        <label for="email">Username</label>
+                                    </div>
+                                    <div class="input-field col s12">
+                                        <input id="password" type="password" class="validate">
+                                        <label for="password">Password</label>
+                                    </div>
+
+                                    <div class="col s12 right-align m-t-sm">
+                                        <a class="btn rounded-btn waves-effect waves-grey btn-fla" [routerLink]="['/dashboard']" (click)="onLoggedin()"> Log in </a>
+                                        <a class="btn rounded-btn waves-effect waves-grey btn-fla" [routerLink]="['/register']"> Sign up </a>
+                                        <!-- <button type="submit" class="waves-effect waves-light btn teal">Login</button> -->
+                                        <button type="reset" class="waves-effect waves-grey btn-flat">Reset</button>
+                                    </div>
+                                    <!-- </form> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="panel panel-primary">
+<div class="panel-body">
+        <form class="form-horizontal" name="form">
+            
+            <div class="form-group">
+                <div class="col-sm-4">
+                    <label>First Name</label>
+                    <input type="text" class="form-control input-sm" placeholder="First Name" name="firstName" [(ngModel)]="user.firstName" #firstName="ngModel" required />
+                </div>
+            
+                <div class="col-sm-4">
+                    <label>Last Name</label>
+                    <input type="text" class="form-control input-sm" placeholder="Last Name" name="lastName" [(ngModel)]="user.lastName" #lastName="ngModel"/>
+                </div>
+                <div class="col-sm-4">
+                    <label>EnterPrise ID</label>
+                    <input type="email" class="form-control input-sm" placeholder="EnterPrise ID" name="enterpriseId" [(ngModel)]="user.enterpriseId" #enterpriseId="ngModel"/>
+                </div>
+                 <div class="col-sm-4">
+                    <label>Project- Team</label>
+                    <input type="text" class="form-control input-sm" placeholder="ProjectTeam" name="projectTeam" [(ngModel)]="user.projectTeam" #projectTeam="ngModel"/>
+                </div>
+                <div class="col-sm-4">
+                    <label>DU</label>
+                    <input type="text" class="form-control input-sm" placeholder="DU" name="du" [(ngModel)]="user.du" #du="ngModel"/>
+                </div>
+              </div>
+<div>
+     <th colspan="3"><a class="btn waves-effect waves-light red" (click)=updateUser()>Update User</a></th>
+</div>
+</form>
+</div>
+</div>

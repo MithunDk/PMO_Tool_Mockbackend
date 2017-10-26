@@ -1,0 +1,100 @@
+html, body, .mn-content {
+    font-size: 14px;
+    height: 100%;
+    width: 100%;
+}
+.mn-content {
+    opacity: 1;
+    -webkit-transition: opacity .3s;
+    -moz-transition: opacity .3s;
+    -o-transition: opacity .3s;
+    transition: opacity .3s;
+}
+.mn-content.fixed-sidebar .mn-inner {
+        padding-left: 245px;
+        width: 100%;
+    }
+    
+/* Header */
+
+.mn-header {
+    z-index: 999;
+    height: 60px!important;
+}
+
+.header-title {
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 60px;
+    float: left;
+    color: #fff;
+    margin-left: 8px;
+    position: relative;
+    cursor: pointer;
+}
+
+.header-title span {
+    margin: 1px 0;
+    display: block;
+}
+
+.navbar-fixed .header-title {
+    margin-left: 56px;
+}
+
+nav {
+    position: relative;
+    padding: 0 16px;
+    height: 60px!important;
+    line-height: 60px!important;
+}
+
+.mn-header.navbar-fixed nav .nav-wrapper {
+    padding-left: 44px;
+}
+
+nav .nav-wrapper {
+    padding-right: 44px;
+}
+
+.nav-right-menu {
+    margin-right: -55.25px;
+}
+
+.nav-right-menu li {
+    float: right;
+}
+
+.navbar-fixed nav .navigation-toggle {
+    position: fixed;
+    left: 12px;
+}
+
+nav .nav-wrapper > ul > li > a {
+    padding: 0 12px;
+    position: relative;
+}
+
+nav i, 
+nav [class^="mdi-"], 
+nav [class*="mdi-"], 
+nav i.material-icons {
+    line-height: 60px;
+}
+
+nav ul li:hover,
+nav ul a:hover {
+    background-color: transparent;
+}
+
+nav .nav-wrapper i {
+    font-size: 22px;
+    color: rgba(255,255,255,0.9);
+}
+
+nav .nav-wrapper .dropdown-content {
+    width: auto!important;
+    white-space: nowrap;
+    padding: 5px 0;
+}

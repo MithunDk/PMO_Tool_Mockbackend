@@ -1,0 +1,75 @@
+.pull-left{
+    float:right;
+}
+.padd-up{
+    padding-top:5px; 
+}
+.padd_5{
+    padding: 5px;
+}
+.pad_top{
+    padding-top: 5px;
+}
+/* tbody {
+    display:block;
+    height:120px;
+    overflow:auto;
+}
+thead, tbody tr {
+    display:table;
+    width:100%;
+    table-layout:fixed;
+}
+thead {
+    width: calc( 100% - 1em )
+}
+table {
+    width:100%;
+} */
+ 
+/* New CSS */
+
+
+/* table {
+    width: 360px;
+    overflow-x: scroll;
+}
+
+thead tr {
+    display: block;
+    width: 100%;
+}
+thead th {
+  
+}
+
+tbody {
+    width: 100%;
+    height: 300px;
+    overflow-y: auto;
+    display: block;
+}
+
+.wrapper {
+    overflow-x: auto;
+    width: 100%;
+    
+} */
+
+
+/* End New CSS */
+
+/* Another New CSS */
+
+/* .inner-table {
+    width:100px;
+    overflow-x:scroll;
+}
+
+th {
+    height:20px;
+} */
+
+
+
+/* Another New CSS */

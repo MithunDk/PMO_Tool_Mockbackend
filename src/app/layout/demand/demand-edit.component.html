@@ -1,0 +1,245 @@
+<!-- <div class="panel panel-primary">
+    <div class="panel-heading">Demand</div>
+    <div class="panel-body">
+        <form class="form-horizontal" name="form">
+            
+            <div class="form-group">
+                <div class="col-sm-4">
+                    <label>Project Name</label>
+                    <input type="text" class="form-control input-sm" name="projectName" [(ngModel)]="demand.projectName" #projectName="ngModel" required />
+                </div>
+            
+                <div class="col-sm-4">
+                    <label>Location</label>
+                    <input type="text" class="form-control input-sm" placeholder="Location" name="location" [(ngModel)]="demand.location" #location="ngModel"/>
+                </div>
+                <div class="col-sm-4">
+                    <label>Chargeable</label>
+                    <input type="text" class="form-control input-sm" placeholder="Chargeable" name="chargeable" [(ngModel)]="demand.chargeable" #chargeable="ngModel"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-4">
+                    <label>Career Level</label>
+                    <input type="text" class="form-control input-sm" placeholder="CareerLevel" name="careerLevel" [(ngModel)]="demand.careerLevel" #careerLevel="ngModel"/>
+                </div>
+                <div class="col-sm-4">
+                    <label>Primary Skill</label>
+                    <input type="text" class="form-control input-sm" placeholder="PrimarySkill" name="primarySkill" [(ngModel)]="demand.primarySkill" #primarySkill="ngModel"/>
+                </div>
+                <div class="col-sm-4">
+                    <label>Demand Status</label>
+                    <input type="text" class="form-control input-sm" placeholder="DemandStatus" name= "demandStatus" [(ngModel)]="demand.demandStatus" #demandStatus="ngModel"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-4">
+                    <label>Reason for Replacement</label>
+                    <input type="text" class="form-control input-sm" placeholder="Reason for Replacement" name="reasonforReplacement" [(ngModel)]="demand.reasonforReplacement" #reasonforReplacement="ngModel" />
+                </div>
+                <div class="col-sm-4">
+                    <label>Demand Created Date</label>
+                    <input type="text" class="form-control input-sm" placeholder="Demand Created Date" name="demandCreatedDate" [(ngModel)]="demand.demandCreatedDate" #demandCreatedDate="ngModel" />
+                </div>
+                <div class="col-sm-4">
+                    <label>Demand Closed Date</label>
+                    <input type="text" class="form-control input-sm" placeholder="Demand Closed Date" name="demandClosedDate" [(ngModel)]="demand.demandClosedDate" #demandClosedDate="ngModel" />
+                </div>
+            </div>
+
+             <div class="form-group">
+                <div class="col-sm-4">
+                    <label>Resource Locked</label>
+                    <input type="text" class="form-control input-sm" placeholder="Resource Locked" />
+                </div>
+                <div class="col-sm-4">
+                    <label>Billing Rate</label>
+                    <input type="text" class="form-control input-sm" placeholder="Billing Rate" />
+                </div>
+                <div class="col-sm-4">
+                    <label>Team/Application Name</label>
+                    <input type="text" class="form-control input-sm" placeholder="Team/Application Name" />
+                </div>
+            </div>
+
+             <div class="form-group">
+                <div class="col-sm-4">
+                    <label>RRD No</label>
+                    <input type="text" class="form-control input-sm" placeholder="RRD No" />
+                </div>
+                <div class="col-sm-4">
+                    <label>Sold</label>
+                    <input type="text" class="form-control input-sm" placeholder="Sold" />
+                </div>
+                <div class="col-sm-4">
+                    <label>Flex on Career Level</label>
+                    <input type="text" class="form-control input-sm" placeholder="Flex on Career Level" />
+                </div>
+            </div>
+
+             <div class="form-group">
+                <div class="col-sm-4">
+                    <label>Additional Skill</label>
+                    <input type="text" class="form-control input-sm" placeholder="Additional Skill" />
+                </div>
+                <div class="col-sm-4">
+                    <label>Priority</label>
+                    <input type="text" class="form-control input-sm" placeholder="Priority" />
+                </div>
+                <div class="col-sm-4">
+                    <label>Replacement For</label>
+                    <input type="text" class="form-control input-sm" placeholder="Replacement For" />
+                </div>
+            </div>
+
+             <div class="form-group">
+                <div class="col-sm-4">
+                    <label>Role Start Date</label>
+                    <input type="text" class="form-control input-sm" placeholder="Role Start Date" />
+                </div>
+                <div class="col-sm-4">
+                    <label>Client Interview Reqd</label>
+                    <input type="text" class="form-control input-sm" placeholder="Client Interview Reqd" />
+                </div>
+                <div class="col-sm-4">
+                    <label>Comments</label>
+                    <input type="text" class="form-control input-sm" placeholder="Comments" />
+                </div>
+            </div>
+
+             <div class="form-group">
+                <div class="col-sm-4">
+                    <label>Bill Code</label>
+                    <input type="text" class="form-control input-sm" placeholder="Bill Code" />
+                </div>
+                <div class="col-sm-4">
+                    <label>Delivery Centre</label>
+                    <input type="text" class="form-control input-sm" placeholder="Delivery Centre" />
+                </div>
+                <div class="col-sm-4">
+                    <label>MYs ID</label>
+                    <input type="text" class="form-control input-sm" placeholder="MYs ID" />
+                </div>
+            </div>
+
+             <div class="form-group">
+                <div class="col-sm-4">
+                    <label>Ready To Lock</label>
+                    <input type="text" class="form-control input-sm" placeholder="Ready To Lock" />
+                </div>
+                <div class="col-sm-4">
+                    <label>Role Title</label>
+                    <input type="text" class="form-control input-sm" placeholder="Role Title" />
+                </div>
+                <div class="col-sm-4">
+                    <label>Job Description</label>
+                    <input type="text" class="form-control input-sm" placeholder="Job Description" />
+                </div>
+            </div>
+
+             <div class="form-group">
+                <div class="col-sm-4">
+                    <label>Demand Type</label>
+                    <input type="text" class="form-control input-sm" placeholder="Demand Type" />
+                </div>
+                <div class="col-sm-4">
+                    <label>Client Manager</label>
+                    <input type="text" class="form-control input-sm" placeholder="Client Manager" />
+                </div>
+                <div class="col-sm-4">
+                    <label>Role End Date</label>
+                    <input type="text" class="form-control input-sm" placeholder="Role End Date" />
+                </div>
+            </div>
+             <div class="form-group">
+                <div class="col-sm-4">
+                    <label>Profiles Shared With Client</label>
+                    <input type="text" class="form-control input-sm" placeholder="Profiles Shared With Client" />
+                </div>
+                <div class="col-sm-4">
+                    <label>Role ID</label>
+                    <input type="text" class="form-control input-sm" placeholder="Role ID" />
+                </div>
+             </div> 
+             <div>
+                    <th colspan="3"><a class="btn waves-effect waves-light red"(click)=updateDemand()>Update Demand</a></th>
+                    
+               
+         </div>
+        </form>
+    </div>
+</div> -->
+
+
+
+<div class="card white darken-1">
+    <div class="card-content ">
+       <div class="card-panel light-blue darken-4"> <span class="white-text text-darken-2">Create Demand</span></div>
+        <div class="row">
+            <form name="form" novalidate>
+                <div class="input-field col s4">
+                    <input type="text" class="form-control input-sm" name="projectName" id="projectName" [(ngModel)]="demand.projectName" [value]="demand.projectName" #projectName="ngModel"
+                        required />
+                    <label class="active" for="projectName">Project Name</label>
+                </div>
+                <div class="input-field col s4">
+                    <input type="text" class="form-control input-sm" name="rrd" id="rrd" [(ngModel)]="demand.rrd" [value]="demand.rrd" #rrd="ngModel"
+                        required />
+                    <label class="active" for="rrd">RRD/MYs ID</label>
+                </div>
+                <div class="input-field col s4">
+                    <input type="text" class="form-control input-sm" name="location" id="location" [(ngModel)]="demand.location"  [value]="demand.location" #location="ngModel" />
+                    <label class="active" for="location">Location</label>
+
+                </div>
+                <div class="input-field col s4">
+                <select [(ngModel)]="demand.priority" id="priority" name="priority" materialize="material_select" [materializeSelectOptions]="priority" #priority="ngModel">
+                  <option *ngFor="let priority of prioritys" >{{priority.name}}</option>
+                </select> 
+                <label>Demand Priority</label>
+                </div>
+
+                <div class="input-field col s4">
+                <select [(ngModel)]="demand.primaryskills" id="primarySkill" name="primarySkill" materialize="material_select" [materializeSelectOptions]="pskills" #primaryskills="ngModel">
+                  <option *ngFor="let psikll of pskills" >{{psikll.name}}</option>
+                </select> 
+                <label>Primary Skills</label>
+                </div>
+     
+                 <div class="input-field col s4">
+                    <select [(ngModel)]="demand.additionalskills" id="additionalSkill" name="additionalSkill" materialize="material_select" [materializeSelectOptions]="askills" #additionalskills="ngModel">
+                        <option *ngFor="let asikll of askills" >{{asikll.name}}</option>
+                    </select> 
+                    <label>Additional Skills</label>
+                </div>
+
+                <div class="input-field col s8">
+                    <textarea id="textarea1" name="textarea1" [(ngModel)]="demand.jobdescription" [value]="demand.jobdescription" class="materialize-textarea" #jobdescription="ngModel"></textarea>
+                    <label class="active" for="textarea1">Job Description</label>
+                </div>
+                
+                 <div class="input-field col s4">
+                   <label>Demand Start Date</label>  
+                   <input id="birthdate" materialize="pickadate" [(ngModel)]="demand.startdate" [materializeParams]="[{format: 'dd/mm/yyyy',selectMonths: true, selectYears: 15}]" name="datepicker" type="text" >
+                </div>
+                 <div class="col s12">
+                    <span class="role">Gender</span>
+                    <span *ngFor="let g of genders">
+                    <input class="with-gap" type="radio" name="gender" [(ngModel)]="demand.gender" [value]="g" id="{{g}}" #gender="ngModel"/>
+                    <label for="{{g}}">{{g}}</label>
+                    </span>
+                </div> 
+            
+                 <div class="col s12">
+               <button class="btn waves-effect waves-light light-blue darken-4" (click)=updateDemand()>Update Demand
+                <i class="material-icons right">send</i>
+               </button>  
+             <button class="btn waves-effect waves-light light-blue darken-4" [routerLink]="['/demand']" >Back</button>  
+                 </div>
+ 
+              
+            </form>
+        </div>
+    </div>
+</div>
